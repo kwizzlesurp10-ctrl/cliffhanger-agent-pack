@@ -1,0 +1,23 @@
+agent:
+  model: claude-sonnet-4.5
+  effort: medium
+  max_turns: 12
+  budget_tokens: 80000
+  budget_usd: 0.50
+skills:
+  - research_niche
+  - draft_serial_pack
+  - personalize_slots
+  - qa_addiction_quality
+  - package_drop
+memory:
+  store: sqlite
+  retention_days: 90
+  categories: [preference, prior_drop, cliffhanger_state]
+gates:
+  qa_pass_threshold: 0.85
+  require_human_approval: true
+observability:
+  trace_all_tools: true
+  log_cost_per_turn: true
+  alert_on_budget_breach: true
